@@ -52,7 +52,7 @@ var OkCorgiApp = function() {
 
     showNextCorgi();
   });
-}
+} 
 
 
 $(document).ready(function() {
