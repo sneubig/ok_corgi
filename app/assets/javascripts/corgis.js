@@ -39,6 +39,14 @@ var OkCorgiApp = function() {
       containerSelector = "#matches";
     }
 
+    function search(containerSelector){
+    $.ajax({
+      type: "PUT",
+      url: "/corgis/:id",
+      dataType:'json',
+      data: {corgis: {match: containerSelector}}
+    });
+  }
     // Append thumbnail list item to the #matches list
     $(containerSelector + " ul").append(createCorgiThumbnail());
 
